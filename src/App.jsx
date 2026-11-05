@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -19,7 +20,10 @@ function App() {
   useEffect(() => {
     const fetchMovies = async () => {
       try {
-        const response = await axios.get("/movies.json");
+        const response = await axios.get(
+          `${import.meta.env.BASE_URL}movies.json`
+        );
+
         setMovies(response.data);
         setError("");
       } catch (err) {
@@ -35,22 +39,25 @@ function App() {
 
   // Add movie to watchlist
   const addToWatchlist = (movie) => {
-    const alreadyAdded = watchlist.some(
-      (item) => item.id === movie.id
-    );
+    setWatchlist((previousWatchlist) => {
+      const alreadyAdded = previousWatchlist.some(
+        (item) => item.id === movie.id
+      );
 
-    if (!alreadyAdded) {
-      setWatchlist((previousWatchlist) => [
-        ...previousWatchlist,
-        movie,
-      ]);
-    }
+      if (alreadyAdded) {
+        return previousWatchlist;
+      }
+
+      return [...previousWatchlist, movie];
+    });
   };
 
   // Remove movie from watchlist
   const removeFromWatchlist = (movieId) => {
     setWatchlist((previousWatchlist) =>
-      previousWatchlist.filter((movie) => movie.id !== movieId)
+      previousWatchlist.filter(
+        (movie) => movie.id !== movieId
+      )
     );
   };
 
@@ -67,14 +74,17 @@ function App() {
 
       {/* Header */}
       <header>
-        <h1> Tamil Movie Watchlist</h1>
-        <p>Discover Tamil movies and create your own watchlist!</p>
+        <h1>🎬 Tamil Movie Watchlist</h1>
+        <p>
+          Discover Tamil movies and create your own watchlist!
+        </p>
       </header>
 
       <main>
 
         {/* Movies Section */}
         <section className="movies-section">
+
           <h2>Explore Tamil Movies</h2>
 
           {/* Genre Filter */}
@@ -100,6 +110,7 @@ function App() {
                 </p>
               ) : (
                 <div className="movie-grid">
+
                   {filteredMovies.map((movie) => {
                     const isAdded = watchlist.some(
                       (item) => item.id === movie.id
@@ -113,16 +124,18 @@ function App() {
                         genre={movie.genre}
                         year={movie.year}
                         rating={movie.rating}
-                        image={movie.image}
+                        image={`${import.meta.env.BASE_URL}${movie.image.replace(/^\/+/, "")}`}
                         onAdd={() => addToWatchlist(movie)}
                         isAdded={isAdded}
                       />
                     );
                   })}
+
                 </div>
               )}
             </>
           )}
+
         </section>
 
         {/* Watchlist Section */}
