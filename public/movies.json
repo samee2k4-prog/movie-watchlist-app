@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "title": "Vikram",
+    "genre": "Action",
+    "year": 2022,
+    "rating": 8.3,
+    "image": "/posters/vikram.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Leo",
+    "genre": "Action",
+    "year": 2023,
+    "rating": 7.2,
+    "image": "/posters/leo.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Master",
+    "genre": "Action",
+    "year": 2021,
+    "rating": 7.3,
+    "image": "/posters/master.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Mersal",
+    "genre": "Action",
+    "year": 2017,
+    "rating": 7.5,
+    "image": "/posters/mersal.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Love Today",
+    "genre": "Comedy",
+    "year": 2022,
+    "rating": 8.0,
+    "image": "/posters/love-today.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Doctor",
+    "genre": "Comedy",
+    "year": 2021,
+    "rating": 7.4,
+    "image": "/posters/doctor.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Don",
+    "genre": "Comedy",
+    "year": 2022,
+    "rating": 6.8,
+    "image": "/posters/don.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Good Night",
+    "genre": "Comedy",
+    "year": 2023,
+    "rating": 8.0,
+    "image": "/posters/good-night.jpg"
+  },
+  {
+    "id": 9,
+    "title": "96",
+    "genre": "Drama",
+    "year": 2018,
+    "rating": 8.5,
+    "image": "/posters/96.jpg"
+  },
+  {
+    "id": 10,
+    "title": "Jai Bhim",
+    "genre": "Drama",
+    "year": 2021,
+    "rating": 8.7,
+    "image": "/posters/jai-bhim.jpg"
+  },
+  {
+    "id": 11,
+    "title": "Thiruchitrambalam",
+    "genre": "Drama",
+    "year": 2022,
+    "rating": 7.9,
+    "image": "/posters/thiruchitrambalam.jpg"
+  },
+  {
+    "id": 12,
+    "title": "Meiyazhagan",
+    "genre": "Drama",
+    "year": 2024,
+    "rating": 8.4,
+    "image": "/posters/meiyazhagan.jpg"
+  }
+]
